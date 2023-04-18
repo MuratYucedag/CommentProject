@@ -1,0 +1,36 @@
+﻿@model List<Comment>
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="tab-content">
+                                @foreach(var item in Model)
+                                {
+                                <div class="timeline timeline-inverse">
+                                    <div>
+                                        <i class="fas fa-comments bg-warning"></i>
+
+                                        <div class="timeline-item">
+                                            <span class="time"><i class="far fa-clock"></i> @item.CommentDate</span>
+
+                                            <h3 class="timeline-header"><a href="#">Ali Yıldız</a> Kategori: Dizi</h3>
+
+                                            <div class="timeline-body">
+                                                @item.CommentDetails
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,22 @@
+﻿@model Title
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<br />
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <h3>Yeni Başlık Oluşturma Sayfası</h3>
+        <br />
+        <label>Kategori Seçiniz</label>
+        @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.v, new{@class="form-control"})
+        <br />
+        <label>Başlığı Giriniz</label>
+        <input type="text" class="form-control" asp-for="TitleName" />
+        <br />
+        <button class="btn btn-outline-success">Başlığı Oluştur</button>
+    </form>
+</div>
