@@ -10,5 +10,7 @@ namespace CommentProject.BusinessLayer.Abstract
     public interface ICommentService : IGenericService<Comment>
     {
         List<Comment> TGetCommentsByTitle(int id);
+        List<Comment> TGetCommentsByTitleWithUser(int id);
+        List<Comment> TGetCommentsByUserWithTitle(int id);
     }
 }

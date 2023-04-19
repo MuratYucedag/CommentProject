@@ -1,0 +1,25 @@
+﻿@model List<Comment>
+@{
+    ViewData["Title"] = "MyComments";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<div class="tab-content">
+    @foreach (var item in Model)
+    {
+        <div class="timeline timeline-inverse">
+            <div>
+                <i class="fas fa-comments bg-warning"></i>
+
+                <div class="timeline-item">
+                    <span class="time"><i class="far fa-clock"></i> @(((DateTime)item.CommentDate).ToString("dd-MMM-yyyy"))</span>
+
+                    <h3 class="timeline-header"><a href="#"></a> Başlık: @item.Title.TitleName</h3>
+                    <div class="timeline-body">
+                        @item.CommentDetails
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

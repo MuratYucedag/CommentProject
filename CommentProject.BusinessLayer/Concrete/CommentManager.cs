@@ -34,6 +34,16 @@ namespace CommentProject.BusinessLayer.Concrete
             return _commentDal.GetCommentsByTitle(id);
         }
 
+        public List<Comment> TGetCommentsByTitleWithUser(int id)
+        {
+            return _commentDal.GetCommentsByTitleWithUser(id);
+        }
+
+        public List<Comment> TGetCommentsByUserWithTitle(int id)
+        {
+            return _commentDal.GetCommentsByUserWithTitle(id);
+        }
+
         public List<Comment> TGetList()
         {
             return _commentDal.GetList();

@@ -1,0 +1,20 @@
+﻿@model Comment
+
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <form method="post">
+        <br />
+        <br />
+        <label>Başlık Seçiniz</label>
+        @Html.DropDownListFor(x=>x.TitleID,(List<SelectListItem>)ViewBag.v, new{@class="form-control"})
+        <br />
+        <label>Yorumunuz</label>
+        <textarea class="form-control" rows="5" asp-for="CommentDetails"></textarea>
+        <br />
+        <button class="btn btn-primary">Yorumu Ekle</button>
+    </form>
+</div>

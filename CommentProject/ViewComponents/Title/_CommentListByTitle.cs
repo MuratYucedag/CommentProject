@@ -10,9 +10,9 @@ namespace CommentProject.ViewComponents.Title
         {
             _commentService = commentService;
         }
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(int id)
         {
-            var values = _commentService.TGetCommentsByTitle(1);
+            var values = _commentService.TGetCommentsByTitleWithUser(id);
             return View(values);
         }
     }

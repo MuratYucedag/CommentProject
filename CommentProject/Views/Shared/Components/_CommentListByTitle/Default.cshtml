@@ -15,10 +15,9 @@
                                         <i class="fas fa-comments bg-warning"></i>
 
                                         <div class="timeline-item">
-                                            <span class="time"><i class="far fa-clock"></i> @item.CommentDate</span>
+                                            <span class="time"><i class="far fa-clock"></i> @(((DateTime)item.CommentDate).ToString("dd-MMM-yyyy"))</span>
 
-                                            <h3 class="timeline-header"><a href="#">Ali Yıldız</a> Kategori: Dizi</h3>
-
+                                            <h3 class="timeline-header"><a href="#">@item.AppUser.Name @item.AppUser.Surname</a> Kategori: @item.Title.Category.CategoryName</h3>
                                             <div class="timeline-body">
                                                 @item.CommentDetails
                                             </div>

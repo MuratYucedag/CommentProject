@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -31,12 +30,12 @@
                 </div>
 
                 <!-- Sidebar Menu -->
-               @await Component.InvokeAsync("_TitleList")
+                @await Component.InvokeAsync("_TitleList")
                 <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
         </aside>
-        @await Component.InvokeAsync("_CommentListByTitle")
+        @await Component.InvokeAsync("_CommentListByTitle",new {id=ViewBag.i})
         <aside class="control-sidebar control-sidebar-dark">
         </aside>
     </div>

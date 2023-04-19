@@ -12,10 +12,10 @@ namespace CommentProject.Controllers
         {
             _titleService = titleService;
         }
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            var values = _titleService.TGetList();
-            return View(values);
+            ViewBag.i = id;
+            return View();
         }
     }
 }
